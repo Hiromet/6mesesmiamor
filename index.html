@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felices 6 Meses Mi Amor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="hearts">
+            <!-- Hearts will be added with JavaScript -->
+        </div>
+        <h1 class="title">Felices 6 Meses Mi Amor</h1>
+        
+        <div class="names">José & Maylen</div>
+        <div class="date">3 de Abril de 2025</div>
+        
+        <div class="message">
+            <p class="poem">
+                En Valorant nos conocimos,<br>
+                entre batallas nos enamoramos.<br>
+                Seis meses han pasado ya,<br>
+                y mi corazón sigue latiendo por ti.<br>
+                A pesar de la distancia,<br>
+                nuestro amor crece cada día más.
+            </p>
+            
+            <p class="love-note">
+                Gracias por cada momento compartido en Valorant, Palworld y Marvel Rivals.
+                Aunque estemos a distancia, te siento cerca de mi corazón.
+            </p>
+            
+            <div class="signature">Con todo mi amor, José</div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating hearts
+        document.addEventListener('DOMContentLoaded', () => {
+            const heartsContainer = document.querySelector('.hearts');
+            
+            // Create 12 hearts
+            for (let i = 0; i < 12; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                
+                // Random positioning
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.animationDelay = `${Math.random() * 10}s`;
+                heart.style.opacity = `${0.3 + Math.random() * 0.7}`;
+                heart.style.transform = `scale(${0.5 + Math.random()})`;
+                
+                heartsContainer.appendChild(heart);
+            }
+        });
+    </script>
+</body>
+</html>
